@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Website</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+        type="image/png"
+        href="imagesfoods/preview-removebg-preview.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- LightGallery CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylefoods.css">
+
+    <!-- Internal Styling -->
+    <style>
+
+        /* Slider Section */
+
+        .food-slider{
+            padding: 3rem 0;
+            position: relative;
+        }
+
+        /* Food Cards */
+
+        .food .slide{
+            text-align: center;
+            padding: 2rem;
+            border-radius: .8rem;
+            background: #fff;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+            transition: .3s ease;
+            cursor: pointer;
+        }
+
+        .food .slide:hover{
+            transform: translateY(-10px);
+        }
+
+        /* Food Images */
+
+        .food .slide img{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: .5rem;
+        }
+
+        /* Food Name */
+
+        .food .slide h3{
+            font-size: 2rem;
+            color: #222;
+            padding-top: 1rem;
+        }
+
+        /* Price */
+
+        .food .slide .price{
+            color: #d6924c;
+            font-size: 1.8rem;
+            padding-top: .5rem;
+        }
+
+        /* Navigation Buttons */
+
+        .swiper-button-next,
+        .swiper-button-prev{
+
+            color: #d6924c;
+            background: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover{
+            background: #d6924c;
+            color: #fff;
+        }
+
+        /* Arrow Icon Size */
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after{
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Arrow Positions */
+
+        .swiper-button-next{
+            right: -20px;
+        }
+
+        .swiper-button-prev{
+            left: -20px;
+        }
+
+        /* Pagination */
+
+        .swiper-pagination-bullet-active{
+            background: #d6924c;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <section class="header">
+
+        <a href="foods.html" class="logo">
+            <i class="fas fa-utensils"></i> FOODIE
+        </a>
+
+        <nav class="navbar">
+
+            <a href="foods.html">Home</a>
+
+            <a href="FOOD_2.html">About</a>
+
+            <a href="FOOD_4.html">Gallery</a>
+
+            <a href="FOOD_5.html">Menu</a>
+
+            <a href="FOOD_6.html" target="_blank">Order</a>
+
+            <a href="BOLGS.html">Blogs</a>
+
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </section>
+
+
+
+    <!-- Food Section -->
+
+    <section class="food" id="food">
+
+        <div class="heading">
+
+            <span>Popular Dishes</span>
+
+            <h3>Our Delicious Food</h3>
+
+        </div>
+
+        <!-- Slider -->
+
+        <div class="swiper food-slider">
+
+            <div class="swiper-wrapper">
+
+                <!-- Food Item 1 -->
+
+                <div class="swiper-slide slide" data-name="food-1">
+
+                    <img src="imagesfoods/pav-bhaji.jpg" alt="Pav Bhaji">
+
+                    <h3>PAV BHAJI</h3>
+
+                    <div class="price">Rs 100</div>
+
+                </div>
+
+                <!-- Food Item 2 -->
+
+                <div class="swiper-slide slide" data-name="food-2">
+
+                    <img src="imagesfoods/Pani-Puri.jpg" alt="Pani Puri">
+
+                    <h3>PANI PURI</h3>
+
+                    <div class="price">Rs 50 / 8 PC</div>
+
+                </div>
+
+                <!-- Food Item 3 -->
+
+                <div class="swiper-slide slide" data-name="food-3">
+
+                    <img src="imagesfoods/BH.jpg" alt="Chole Bhature">
+
+                    <h3>CHOLE BHATURE</h3>
+
+                    <div class="price">Rs 120</div>
+
+                </div>
+
+                <!-- Food Item 4 -->
+
+                <div class="swiper-slide slide" data-name="food-4">
+
+                    <img src="imagesfoods/tikki.jfif" alt="Aloo Tikki">
+
+                    <h3>ALOO TIKKI</h3>
+
+                    <div class="price">Rs 70</div>
+
+                </div>
+
+                <!-- Food Item 5 -->
+
+                <div class="swiper-slide slide" data-name="food-5">
+
+                    <img src="imagesfoods/dosa.jpg" alt="Dosa">
+
+                    <h3>SOUTH INDIAN DOSA</h3>
+
+                    <div class="price">Rs 110</div>
+
+                </div>
+
+                <!-- Food Item 6 -->
+
+                <div class="swiper-slide slide" data-name="food-6">
+
+                    <img src="imagesfoods/download (1).jfif" alt="Jalebi">
+
+                    <h3>JALEBI</h3>
+
+                    <div class="price">Rs 360 / KG</div>
+
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+
+            <div class="swiper-pagination"></div>
+
+            <!-- Navigation Buttons -->
+
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Swiper JS -->
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- Slider Script -->
+
+    <script>
+
+        // Mobile Menu
+
+        const menuBtn = document.getElementById('menu-btn');
+        const navbar = document.querySelector('.navbar');
+
+        menuBtn.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+
+        // Swiper Slider
+
+        var swiper = new Swiper(".food-slider", {
+
+            loop: true,
+
+            centeredSlides: true,
+
+            grabCursor: true,
+
+            spaceBetween: 30,
+
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+
+                0: {
+                    slidesPerView: 1,
+                },
+
+                768: {
+                    slidesPerView: 2,
+                },
+
+                1024: {
+                    slidesPerView: 3,
+                },
+
+            },
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tags -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FOODIE HOME</title>
+
+    <!-- Favicon -->
+
+    <link rel="shortcut icon"
+        type="image/png"
+        href="imagesfoods/preview-removebg-preview.png">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Swiper CSS -->
+
+    <link rel="stylesheet"
+        href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="stylefoods.css">
+
+    <!-- Internal CSS -->
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            overflow-x: hidden;
+            background: #f8f8f8;
+        }
+
+        /* Header */
+
+        .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 1.5rem 7%;
+
+            background: #fff;
+
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+
+            z-index: 1000;
+        }
+
+        /* Logo */
+
+        .header .logo{
+            font-size: 2rem;
+            font-weight: bold;
+            color: #222;
+            text-decoration: none;
+        }
+
+        .header .logo i{
+            color: #d6924c;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .navbar a{
+            color: #222;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: .3s ease;
+        }
+
+        .navbar a:hover{
+            color: #d6924c;
+        }
+
+        /* Highlight Links */
+
+        .special-link{
+            padding: .6rem 1.4rem;
+            background: #d6924c;
+            color: #fff !important;
+            border-radius: .5rem;
+        }
+
+        .special-link:hover{
+            background: #222;
+        }
+
+        /* Mobile Menu */
+
+        #menu-btn{
+            font-size: 2rem;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* Home Section */
+
+        .home{
+            height: 100vh;
+        }
+
+        .home .slide{
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-size: cover !important;
+            background-position: center !important;
+
+            position: relative;
+        }
+
+        /* Overlay */
+
+        .home .slide::before{
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,.45);
+        }
+
+        /* Content */
+
+        .home .slide .content{
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 70rem;
+        }
+
+        .home .slide .content span{
+            display: block;
+            color: #d6924c;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .home .slide .content h3{
+            color: #fff;
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            text-transform: capitalize;
+        }
+
+        /* Button */
+
+        .btn{
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #d6924c;
+            color: #fff;
+            border-radius: .5rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: .3s ease;
+        }
+
+        .btn:hover{
+            background: #222;
+        }
+
+        /* Swiper Arrows */
+
+        .swiper-button-next,
+        .swiper-button-prev{
+            color: #fff;
+        }
+
+        /* Compact Footer */
+
+        .footer{
+            background: #111;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .footer .credit{
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .footer .credit span{
+            color: #d6924c;
+        }
+
+        /* Responsive */
+
+        @media(max-width:991px){
+
+            #menu-btn{
+                display: block;
+            }
+
+            .navbar{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+
+                background: #fff;
+
+                flex-direction: column;
+
+                display: none;
+
+                padding: 1rem 0;
+            }
+
+            .navbar.active{
+                display: flex;
+            }
+
+            .home .slide .content h3{
+                font-size: 3rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <!-- Logo -->
+
+        <a href="foods.html" class="logo">
+            <i class="fas fa-utensils"></i> FOODIE
+        </a>
+
+        <!-- Navbar -->
+
+        <nav class="navbar">
+
+            <a href="FOOD_2.html">About</a>
+
+            <a href="FOOD_3.html">Food</a>
+
+            <a href="FOOD_4.html">Gallery</a>
+
+            <a href="FOOD_5.html">Menu</a>
+
+            <a href="FOOD_6.html" target="_blank">Order</a>
+
+            <a href="BOLGS.html">Blogs</a>
+
+            <!-- Swiggy -->
+
+            <a href="https://www.swiggy.com/"
+                target="_blank"
+                class="special-link">
+
+                Swiggy
+
+            </a>
+
+            <!-- Zomato -->
+
+            <a href="https://www.zomato.com/india"
+                target="_blank"
+                class="special-link">
+
+                Zomato
+
+            </a>
+
+        </nav>
+
+        <!-- Mobile Menu -->
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+
+
+
+    <!-- Home Section -->
+
+    <section class="home" id="home">
+
+        <div class="swiper home-slider">
+
+            <div class="swiper-wrapper">
+
+                <!-- Slide 1 -->
+
+                <div class="swiper-slide slide"
+                    style="background:url(imagesfoods/home-slide-1.jpg) no-repeat;">
+
+                    <div class="content">
+
+                        <span>Swiggy & Zomato</span>
+
+                        <h3>Delicious Cooking</h3>
+
+                        <a href="https://www.zomato.com/india"
+                            target="_blank"
+                            class="btn">
+
+                            Order Now
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Slide 2 -->
+
+                <div class="swiper-slide slide"
+                    style="background:url(imagesfoods/home-slide-2.jpg) no-repeat;">
+
+                    <div class="content">
+
+                        <span>Outstanding Food</span>
+
+                        <h3>Morning Moments</h3>
+
+                        <a href="FOOD_3.html"
+                            class="btn">
+
+                            Explore Food
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Slide 3 -->
+
+                <div class="swiper-slide slide"
+                    style="background:url(imagesfoods/home-slide-3.jpg) no-repeat;">
+
+                    <div class="content">
+
+                        <span>Authentic Kitchen</span>
+
+                        <h3>Fresh & Healthy</h3>
+
+                        <a href="FOOD_5.html"
+                            class="btn">
+
+                            View Menu
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Navigation Arrows -->
+
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <div class="credit">
+
+            Created by <span>AMAN RANJAN</span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Swiper JS -->
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+
+    <script>
+
+        // Mobile Navbar
+
+        const menuBtn = document.getElementById('menu-btn');
+        const navbar = document.querySelector('.navbar');
+
+        menuBtn.addEventListener('click', () => {
+
+            navbar.classList.toggle('active');
+
+        });
+
+
+        // Swiper Slider
+
+        var swiper = new Swiper(".home-slider", {
+
+            loop: true,
+
+            grabCursor: true,
+
+            autoplay: {
+
+                delay: 3500,
+
+                disableOnInteraction: false,
+
+            },
+
+            navigation: {
+
+                nextEl: ".swiper-button-next",
+
+                prevEl: ".swiper-button-prev",
+
+            },
+
+        });
+
+    </script>
+
+</body>
+
+</html>

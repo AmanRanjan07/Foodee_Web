@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Website</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+        type="image/png"
+        href="imagesfoods/preview-removebg-preview.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- LightGallery CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylefoods.css">
+
+    <!-- Internal Styling -->
+    <style>
+
+        /* Gallery Section */
+
+        .gallery{
+            padding: 5rem 9%;
+            background: #f8f8f8;
+        }
+
+        /* Gallery Grid */
+
+        .gallery-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Gallery Box */
+
+        .gallery-container .box{
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            height: 300px;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+        }
+
+        /* Images */
+
+        .gallery-container .box img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .4s ease;
+        }
+
+        /* Hover Effect */
+
+        .gallery-container .box:hover img{
+            transform: scale(1.1);
+        }
+
+        /* Overlay Icon */
+
+        .gallery-container .box .icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background: rgba(214, 146, 76, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: .3s ease;
+        }
+
+        .gallery-container .box:hover .icon{
+            opacity: 1;
+        }
+
+        .gallery-container .box .icon i{
+            color: #fff;
+            font-size: 2rem;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header Section Starts -->
+
+    <section class="header">
+
+        <!-- Logo -->
+
+        <a href="foods.html" class="logo">
+            <i class="fas fa-utensils"></i> FOODIE
+        </a>
+
+        <!-- Navbar -->
+
+        <nav class="navbar">
+
+            <a href="foods.html">Home</a>
+
+            <a href="FOOD_2.html">About</a>
+
+            <a href="FOOD_3.html">Food</a>
+
+            <!-- Current Gallery Page -->
+
+            <a href="FOOD_5.html">Menu</a>
+
+            <a href="FOOD_6.html" target="_blank">Order</a>
+
+            <a href="BOLGS.html">Blogs</a>
+
+        </nav>
+
+        <!-- Mobile Menu -->
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </section>
+
+    <!-- Header Section Ends -->
+
+
+
+    <!-- Gallery Section Starts -->
+
+    <section class="gallery" id="gallery">
+
+        <div class="heading">
+
+            <span>Our Gallery</span>
+
+            <h3>Our Untold Stories</h3>
+
+        </div>
+
+        <!-- Gallery Container -->
+
+        <div class="gallery-container">
+
+            <!-- Pizza -->
+
+            <a href="imagesfoods/PIZZA.jpg" class="box">
+
+                <img src="imagesfoods/PIZZA.jpg"
+                    alt="Delicious Pizza">
+
+                <div class="icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+            </a>
+
+            <!-- Fries -->
+
+            <a href="imagesfoods/FRIES.jpg" class="box">
+
+                <img src="imagesfoods/FRIES.jpg"
+                    alt="French Fries">
+
+                <div class="icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+            </a>
+
+            <!-- Momo -->
+
+            <a href="imagesfoods/MOMO.jpg" class="box">
+
+                <img src="imagesfoods/MOMO.jpg"
+                    alt="Steamed Momos">
+
+                <div class="icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+            </a>
+
+            <!-- Samosa -->
+
+            <a href="imagesfoods/SAMOSA.jpeg" class="box">
+
+                <img src="imagesfoods/SAMOSA.jpeg"
+                    alt="Indian Samosa">
+
+                <div class="icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+            </a>
+
+            <!-- Sandwich -->
+
+            <a href="imagesfoods/SAND.jpg" class="box">
+
+                <img src="imagesfoods/SAND.jpg"
+                    alt="Sandwich">
+
+                <div class="icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+            </a>
+
+            <!-- Burger -->
+
+            <a href="imagesfoods/BURGER.jpg" class="box">
+
+                <img src="imagesfoods/BURGER.jpg"
+                    alt="Burger">
+
+                <div class="icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Gallery Section Ends -->
+
+
+
+    <!-- Footer Section Starts -->
+
+    <section class="footer">
+
+        <div class="credit">
+
+            Created by <span>AMAN RANJAN</span>
+
+        </div>
+
+    </section>
+
+    <!-- Footer Section Ends -->
+
+
+
+    <!-- LightGallery JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/lightgallery.min.js"></script>
+
+    <!-- Gallery Initialization -->
+
+    <script>
+
+        // Mobile Navbar Toggle
+
+        const menuBtn = document.getElementById('menu-btn');
+        const navbar = document.querySelector('.navbar');
+
+        menuBtn.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+
+        // LightGallery Initialization
+
+        lightGallery(document.querySelector('.gallery-container'));
+
+    </script>
+
+</body>
+
+</html>
